@@ -59,7 +59,50 @@
   .campus-photos img{height:280px;filter:saturate(.88) contrast(1.03);transition:transform .4s ease,filter .4s ease}
   .campus-photos img:hover{transform:translateY(-5px);filter:saturate(1) contrast(1.05)}
   @media(max-width:720px){.campus-photos{display:block}.campus-photos img{height:250px;margin-bottom:14px}.campus-photos img:last-child{margin-bottom:0}}
+  .production-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1120px;margin:58px auto 0}.production-grid figure{margin:0;position:relative;overflow:hidden;background:#111;aspect-ratio:4/3}.production-grid img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .6s ease,filter .4s ease}.production-grid figure:hover img{transform:scale(1.04);filter:brightness(.92)}.production-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 20px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.85));display:flex;flex-direction:column;gap:6px}.production-grid figcaption span{font:9px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#d7d7d7}.production-grid figcaption strong{font:500 19px var(--serif)}
+  @media(max-width:900px){.production-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:720px){.production-grid{display:block;margin-top:40px}.production-grid figure{margin-bottom:16px}.production-grid figure:last-child{margin-bottom:0}.production-grid figcaption{padding:20px 16px 16px}.production-grid figcaption strong{font-size:17px}}
 </style>
+  <style>
+    body{font-family:"Noto Sans Thai","Manrope",sans-serif;font-size:15px;line-height:1.65}
+    .site-header .header-cta{display:none}
+    .site-header .logo{display:inline-flex;align-items:center;gap:10px;font-size:0!important;letter-spacing:0;margin-bottom:0;color:var(--ink);text-decoration:none}
+    .site-header .logo::before{content:"JS";width:32px;height:32px;border:1px solid currentColor;border-radius:50%;display:grid;place-items:center;font:600 11px "Manrope",sans-serif;letter-spacing:-.04em}
+    .site-header .logo::after{display:none}
+    .site-header nav{margin-left:28px}
+    @media(min-width:721px){.site-header{padding-top:24px}.site-header .logo{align-self:center;margin-bottom:54px}.site-header nav{margin-left:0}}
+    .hero-intro,.statement-side p,.category-heading>p:last-child,.campus-grid p{font-size:14px;line-height:1.75}
+    nav a,.header-cta,.text-link,.all-work,.project-meta span,.video-meta span,.modern-grid span,.eyebrow{font-size:11px}
+    .video-meta strong{font-size:16px}
+    .campus-grid h3{font-size:25px}
+    .category-heading h2{font-size:clamp(38px,4.8vw,68px)}
+    #contact .eyebrow{font-size:12px}
+    #contact .contact-links a{padding:27px 0}
+    #contact .contact-links{max-width:980px;grid-template-columns:repeat(2,minmax(320px,1fr))}
+    #contact .contact-links span{font-size:12px}
+    #contact .contact-links strong{font-family:"Noto Sans Thai","Manrope",sans-serif;font-size:24px;line-height:1.45}
+    #contact .contact-links a:last-child strong{white-space:nowrap;font-size:22px}
+    #contact .contact-links b{font-size:22px}
+    #contact .contact-bottom{font-size:15px}
+    @media(max-width:720px){#contact .contact-links{grid-template-columns:1fr}.contact-links a:last-child strong{white-space:normal}}
+    html{scroll-behavior:smooth}
+    body{overflow-x:hidden}
+    .category-heading>p:last-child{max-width:620px;margin-left:auto;margin-right:auto}
+    #airforce .category-heading h2{font-size:clamp(30px,3.7vw,52px);letter-spacing:-.035em}
+    .production-grid figure,.airforce-grid a{border-radius:12px}
+    .airforce-grid a{background:#f4f4f4!important}
+    @media(max-width:720px){
+      .site-header{gap:18px}
+      .site-header nav{margin-left:14px}
+      .site-header nav{display:flex;gap:18px;max-width:100%;min-width:0;overflow-x:auto;padding-bottom:5px;scrollbar-width:none}
+      .site-header nav::-webkit-scrollbar{display:none}
+      .site-header nav a{flex:0 0 auto}
+      .production-grid,.airforce-grid{grid-template-columns:1fr!important;gap:16px!important;margin-top:40px!important}
+      .production-grid figure,.airforce-grid a{margin:0!important}
+      .category-heading h2{font-size:clamp(34px,10vw,52px);line-height:1.08}
+      #airforce .category-heading h2{font-size:clamp(27px,7.5vw,40px)}
+    }
+  </style>
 </head>
 <body>
 <!--
@@ -72,7 +115,7 @@
 -->
 <header class="site-header"><a href="#top" class="logo">James Schrott</a><nav aria-label="Main navigation"><a href="#work">Works</a><a href="#video">Video</a><a href="#work">Photography</a><a href="#campus">Campus</a><a href="#contact">Contact</a></nav><a class="header-cta" href="mailto:saharat.schrott@gmail.com">Let's talk <span>↗</span></a></header>
 <main id="top">
-  <section class="hero"><div class="hero-copy"><p class="eyebrow"><span></span> Bangkok, Thailand · 2026</p><h1>Stories in<br><em>focus.</em></h1><p class="hero-intro">I’m James Schrott, a photographer and editor capturing people, places, and the beautiful in-between.</p><a class="text-link" href="#work">Explore selected work <b>↓</b></a></div><figure class="hero-image"><img src="images/hero-campus.jpg" alt="James Schrott documenting a university activity"><figcaption>James Schrott</figcaption></figure><p class="vertical-note">SCROLL TO DISCOVER</p></section>
+  <section class="hero"><div class="hero-copy"><p class="eyebrow"><span></span> Bangkok, Thailand · 2026</p><h1>Visual work<br><em>with purpose.</em></h1><p class="hero-intro">I’m James Schrott, a photographer and editor capturing people, places, and the beautiful in-between.</p><a class="text-link" href="#work">Explore selected work <b>↓</b></a></div><figure class="hero-image"><img src="images/hero-campus.jpg" alt="James Schrott documenting a university activity"><figcaption>James Schrott</figcaption></figure><p class="vertical-note">SCROLL TO DISCOVER</p></section>
   <section class="work" id="work"><div class="section-heading"><p class="eyebrow">02 — PHOTOGRAPHY</p><h2>Photography <em>works.</em></h2><p>Portraits, places, and details worth remembering.</p></div><div class="gallery"><a href="#contact" class="project project-large"><div class="project-image"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=85" alt="Woman in a field at golden hour"></div><div class="project-meta"><span>01 / Portraits</span><strong>Golden Hour</strong><i>↗</i></div></a><a href="#contact" class="project"><div class="project-image"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85" alt="Fog rolling over mountains"></div><div class="project-meta"><span>02 / Travel</span><strong>Wanderlust</strong><i>↗</i></div></a><a href="#contact" class="project"><div class="project-image"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=85" alt="Crowd at an outdoor concert"></div><div class="project-meta"><span>03 / Events</span><strong>After Dark</strong><i>↗</i></div></a><a href="#contact" class="project"><div class="project-image"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85" alt="Portrait in natural light"></div><div class="project-meta"><span>04 / Portraits</span><strong>Blue Hour</strong><i>↗</i></div></a><a href="#contact" class="project"><div class="project-image"><img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=900&q=85" alt="Forest landscape"></div><div class="project-meta"><span>05 / Nature</span><strong>Into the Wild</strong><i>↗</i></div></a><a href="#contact" class="project"><div class="project-image"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85" alt="Fashion portrait"></div><div class="project-meta"><span>06 / Editorial</span><strong>New Perspective</strong><i>↗</i></div></a><a href="#contact" class="project"><div class="project-image"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=85" alt="Studio portrait"></div><div class="project-meta"><span>07 / Portraits</span><strong>Close Up</strong><i>↗</i></div></a><a href="#contact" class="project"><div class="project-image"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=900&q=85" alt="Concert lights"></div><div class="project-meta"><span>08 / Live</span><strong>Electric Night</strong><i>↗</i></div></a><a href="#contact" class="project"><div class="project-image"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=85" alt="Open road landscape"></div><div class="project-meta"><span>09 / Travel</span><strong>Open Road</strong><i>↗</i></div></a><a href="#contact" class="project"><div class="project-image"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=85" alt="Snow mountain landscape"></div><div class="project-meta"><span>10 / Landscape</span><strong>Quiet Peak</strong><i>↗</i></div></a></div><a class="all-work" href="#contact">View all work <span>→</span></a></section>
   <section class="category-section" id="video"><div class="category-heading"><p class="eyebrow">03 — VIDEO</p><h2>Video <em>works.</em></h2><p>คลิป YouTube, short films และ behind-the-scenes ที่เล่าเรื่องผ่านภาพเคลื่อนไหว</p></div><div class="video-grid"><a class="video-card" href="https://www.youtube.com/watch?v=U1vJMLg4Czo" target="_blank" rel="noopener"><div class="video-poster poster-one"><span class="play">▶</span></div><div class="video-meta"><span>01 / Short film</span><strong>เล่ห์ (Leh) | Shortfilm</strong><i>↗</i><p class="video-role"><b>หน้าที่</b> Extra — แสดงเป็นลูกน้อง · Gaffer · Script report · Graphic Design — ออกแบบ Banner Poster</p></div></a><a class="video-card" href="https://youtu.be/ggruIJUJAEg?si=LXhDe98QusqfHHjh" target="_blank" rel="noopener"><div class="video-poster poster-two"><span class="play">▶</span></div><div class="video-meta"><span>02 / Short horror film</span><strong>เจอ ไม่ดี | Short Horror Film</strong><i>↗</i><p class="video-role"><b>หน้าที่</b> Assistant Camera · Prop Master · Gaffer · Location Scout · Colorist · Cutter / VFX / Foley · Graphic Design · Sound Editor</p></div></a><a class="video-card" href="https://www.youtube.com/watch?v=y9tU729pbnU" target="_blank" rel="noopener"><div class="video-poster poster-three"><span class="play">▶</span></div><div class="video-meta"><span>03 / Video project</span><strong>Video Project</strong><i>↗</i><p class="video-role"><b>หน้าที่</b> Editor</p></div></a></div></section>
   <section class="category-section campus-section" id="campus"><div class="category-heading"><p class="eyebrow">05 — UNIVERSITY LIFE</p><h2>Campus <em>stories.</em></h2><p>ผลงานและกิจกรรมด้านสื่อสร้างสรรค์ในมหาวิทยาลัย</p></div><div class="campus-photos"><img src="images/campus01.jpg" alt="บรรยากาศงานสัมมนาวิชาการ"><img src="images/campus02.JPG" alt="การสัมภาษณ์ผู้กำกับภาพยนตร์ในงานสัมมนา"><img src="images/campus03.GIF" alt="กิจกรรมค่ายภาพยนตร์สำหรับนักเรียนมัธยมปลาย"></div><div class="campus-grid"><article><span>01 / งานสัมมนาวิชาการ</span><h3>งานสัมมนาวิชาการ</h3><p>มีส่วนร่วมในการวางแผนและจัดงานสัมมนาวิชาการ ดูแลการดำเนินงานภายในงาน และบันทึกภาพกิจกรรมอย่างเป็นระบบ</p></article><article><span>02 / งานสัมมนาวิชาการ</span><h3>สัมภาษณ์ผู้กำกับภาพยนตร์</h3><p>รับผิดชอบการเตรียมและดำเนินการสัมภาษณ์ผู้กำกับภาพยนตร์ชื่อดัง 2 ท่าน เพื่อถ่ายทอดมุมมองและประสบการณ์ด้านการทำงานภาพยนตร์</p></article><article><span>03 / ค่ายภาพยนตร์</span><h3>ค่ายภาพยนตร์สร้างสรรค์</h3><p>จัดกิจกรรมค่ายภาพยนตร์สำหรับนักเรียนมัธยมปลาย ถ่ายทอดพื้นฐานการเล่าเรื่อง การถ่ายทำ และกระบวนการผลิตภาพยนตร์เบื้องต้น</p></article></div></section>
@@ -84,7 +127,7 @@
   const lightboxImage = lightbox.querySelector('img');
   const lightboxCaption = lightbox.querySelector('figcaption');
   const closeLightbox = () => { lightbox.classList.remove('is-open'); document.body.style.overflow = ''; };
-  document.querySelectorAll('.project-image img, .photo-strip img, .modern-grid img').forEach((image) => {
+  document.querySelectorAll('.project-image img, .photo-strip img, .modern-grid img, #production img').forEach((image) => {
     const trigger = image.closest('a') || image;
     trigger.addEventListener('click', (event) => {
       event.preventDefault();
@@ -134,5 +177,149 @@
     if (filename.toLowerCase().startsWith('img_7574')) image.classList.add('feature-image');
     if (filename.toLowerCase().startsWith('img_6917')) image.classList.add('cool-tone');
   });
+  const productionSection = document.querySelector('#production');
+  const workEyebrow = document.querySelector('#work .eyebrow');
+  const videoEyebrow = document.querySelector('#video .eyebrow');
+  const campusEyebrow = document.querySelector('#campus .eyebrow');
+  const contactEyebrow = document.querySelector('#contact .eyebrow');
+  if (workEyebrow) workEyebrow.textContent = '02 — PHOTOGRAPHY';
+  if (videoEyebrow) videoEyebrow.textContent = '03 — VIDEO';
+  if (campusEyebrow) campusEyebrow.textContent = '05 — UNIVERSITY LIFE';
+  if (contactEyebrow) contactEyebrow.textContent = '06 — CONTACT INFORMATION';
+  const mainContent = document.querySelector('main');
+  const contactSection = mainContent && mainContent.querySelector('.contact');
+  if (productionSection && mainContent && contactSection) mainContent.insertBefore(productionSection, contactSection);
+  const mainNav = document.querySelector('nav');
+  if (mainNav && !mainNav.querySelector('[href="#production"]')) {
+    const onSetLink = document.createElement('a');
+    onSetLink.href = '#production';
+    onSetLink.textContent = 'On set';
+    const campusLink = mainNav.querySelector('[href="#campus"]');
+    mainNav.insertBefore(onSetLink, campusLink || null);
+  }
+</script>
+<section class="category-section production-section" id="production"><div class="category-heading"><p class="eyebrow">04 — ON SET</p><h2>On <em>set.</em></h2><p>บรรยากาศการทำงานเบื้องหลังในกองถ่าย ตั้งแต่การเตรียมงานจนถึงการถ่ายทำจริง</p></div><div class="production-grid"><figure><img src="images/onset01.HEIC" alt="บรรยากาศการทำงานในกองถ่าย ภาพที่ 1"><figcaption><span>01 / On set</span><strong>บรรยากาศการทำงานในกองถ่าย</strong></figcaption></figure><figure><img src="images/onset02.JPG" alt="บรรยากาศการทำงานในกองถ่าย ภาพที่ 2"><figcaption><span>02 / On set</span><strong>เบื้องหลังการเตรียมงานและการถ่ายทำ</strong></figcaption></figure><figure><img src="images/onset03.JPG" alt="บรรยากาศการทำงานในกองถ่าย ภาพที่ 3"><figcaption><span>03 / On set</span><strong>การทำงานร่วมกันของทีมงานในกองถ่าย</strong></figcaption></figure></div></section>
+<script>
+  const orderedMain = document.querySelector('main');
+  const sectionNumbers = [
+    ['#work .section-heading .eyebrow', '01 — PHOTOGRAPHY'],
+    ['#video .eyebrow', '02 — VIDEO'],
+    ['#production .eyebrow', '03 — ON SET'],
+    ['#campus .eyebrow', '04 — UNIVERSITY LIFE'],
+    ['#airforce .eyebrow', '05 — AIR FORCE MEDIA'],
+    ['#contact .eyebrow', '06 — CONTACT INFORMATION']
+  ];
+  sectionNumbers.forEach(([selector, label]) => {
+    const eyebrow = document.querySelector(selector);
+    if (eyebrow) eyebrow.textContent = label;
+  });
+  const orderedSections = ['#work', '#video', '#production', '#campus', '#contact']
+    .map((selector) => document.querySelector(selector)).filter(Boolean);
+  const contactAnchor = document.querySelector('#contact');
+  if (orderedMain && contactAnchor) orderedSections.slice(0, -1).forEach((section) => orderedMain.insertBefore(section, contactAnchor));
+  const orderedNav = document.querySelector('nav');
+  if (orderedNav) {
+    const labels = [['#work', 'Photography'], ['#video', 'Video'], ['#production', 'On set'], ['#campus', 'Campus'], ['#contact', 'Contact']];
+    const links = labels.map(([href, label]) => {
+      let link = orderedNav.querySelector(`a[href="${href}"]`);
+      if (!link) { link = document.createElement('a'); link.href = href; }
+      link.textContent = label;
+      return link;
+    });
+    orderedNav.replaceChildren(...links);
+  }
+  const onsetOnePreview = document.querySelector('img[src$="onset01.HEIC"]');
+  if (onsetOnePreview) {
+    onsetOnePreview.src = 'images/onset01.jpg';
+  }
+  document.querySelectorAll('#production figcaption').forEach((caption) => caption.remove());
+</script>
+<script>
+  document.querySelectorAll('#production img, .campus-photos img').forEach((image) => {
+    image.addEventListener('click', (event) => {
+      event.preventDefault();
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt;
+      lightboxCaption.textContent = '';
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+</script>
+<script>
+  const productionGrid = document.querySelector('#production .production-grid');
+  if (productionGrid && !productionGrid.querySelector('[data-onset-video]')) {
+    const videoFigure = document.createElement('figure');
+    videoFigure.dataset.onsetVideo = 'true';
+    videoFigure.innerHTML = '<video controls playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;background:#111"><source src="images/onset04.mp4" type="video/mp4">เบราว์เซอร์ของคุณไม่รองรับวิดีโอ</video>';
+    productionGrid.appendChild(videoFigure);
+  }
+</script>
+<script>
+  const productionGridWithPhoto = document.querySelector('#production .production-grid');
+  if (productionGridWithPhoto && !productionGridWithPhoto.querySelector('[data-onset-photo]')) {
+    const photoFigure = document.createElement('figure');
+    photoFigure.dataset.onsetPhoto = 'true';
+    photoFigure.innerHTML = '<img src="images/onset05.jpg" alt="บรรยากาศการทำงานในกองถ่าย ภาพที่ 5" style="width:100%;height:100%;display:block;object-fit:cover;object-position:center;transform:scale(1.04);">';
+    productionGridWithPhoto.appendChild(photoFigure);
+    const photo = photoFigure.querySelector('img');
+    photo.addEventListener('click', (event) => {
+      event.preventDefault();
+      lightboxImage.src = photo.src;
+      lightboxImage.alt = photo.alt;
+      lightboxCaption.textContent = '';
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    });
+  }
+</script>
+<script>
+  const airForceSection = document.createElement('section');
+  airForceSection.className = 'category-section airforce-section';
+  airForceSection.id = 'airforce';
+  airForceSection.innerHTML = '<div class="category-heading"><p class="eyebrow">06 — AIR FORCE MEDIA</p><h2>ผลงานภาพถ่าย <em>วิดีโอ</em> ระหว่างเป็นทหารเกณฑ์</h2><p>ผลงานภาพถ่าย วิดีโอ และการผลิตสื่อระหว่างปฏิบัติหน้าที่ในกองทัพอากาศ</p></div><div class="airforce-grid" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:1120px;margin:58px auto 0"><a href="https://www.facebook.com/share/r/1cXWC1i4NQ/" target="_blank" rel="noopener" style="display:block;overflow:hidden;background:#111"><img src="images/army01.png" alt="Army media project 01" style="width:100%;height:360px;object-fit:cover;display:block"></a><a href="https://www.facebook.com/share/v/1AHqAB4D8e/" target="_blank" rel="noopener" style="display:block;overflow:hidden;background:#111"><img src="images/army02.png" alt="Army media project 02" style="width:100%;height:360px;object-fit:cover;display:block"></a></div>';
+  const extraArmyProjects = [
+    ['army03.png', 'https://www.facebook.com/share/p/1DqLJPP3AA/', 'Army media project 03'],
+    ['army04.png', 'https://www.facebook.com/share/p/1F4SQSQzdu/', 'Army media project 04']
+  ];
+  const airForceGrid = airForceSection.querySelector('.airforce-grid');
+  extraArmyProjects.forEach(([filename, url, alt]) => {
+    const card = document.createElement('a');
+    card.href = url;
+    card.target = '_blank';
+    card.rel = 'noopener';
+    card.style.cssText = 'display:block;overflow:hidden;background:#f4f4f4';
+    card.innerHTML = `<img src="images/${filename}" alt="${alt}" style="width:100%;height:360px;object-fit:cover;display:block">`;
+    airForceGrid.appendChild(card);
+  });
+  const airForceMain = document.querySelector('main');
+  const airForceContact = document.querySelector('#contact');
+  if (airForceMain && airForceContact && !document.querySelector('#airforce')) airForceMain.insertBefore(airForceSection, airForceContact);
+  const contactLabel = document.querySelector('#contact .eyebrow');
+  if (contactLabel) contactLabel.textContent = '07 — CONTACT INFORMATION';
+  const airForceNav = document.querySelector('nav');
+  if (airForceNav && !airForceNav.querySelector('[href="#airforce"]')) {
+    const link = document.createElement('a');
+    link.href = '#airforce';
+    link.textContent = 'AIR FORCE MEDIA';
+    airForceNav.insertBefore(link, airForceNav.querySelector('[href="#contact"]') || null);
+  }
+  document.querySelectorAll('#airforce a').forEach((card) => {
+    card.style.background = 'var(--paper, #f4f4f4)';
+  });
+  document.querySelectorAll('#airforce img').forEach((image) => {
+    image.style.transform = 'none';
+    image.style.height = 'auto';
+    image.style.objectFit = 'contain';
+    image.style.objectPosition = 'center center';
+    image.style.mixBlendMode = 'normal';
+    image.style.opacity = '1';
+  });
+</script>
+<script>
+  const airForceNumber = document.querySelector('#airforce .eyebrow');
+  if (airForceNumber) airForceNumber.textContent = '05 — AIR FORCE MEDIA';
+  const finalContactNumber = document.querySelector('#contact .eyebrow');
+  if (finalContactNumber) finalContactNumber.textContent = '06 — CONTACT INFORMATION';
 </script>
 </body></html>
